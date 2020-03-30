@@ -1,4 +1,5 @@
-# 2018/2019 - Zadanie 6 - Tablice i dziedziczenie (Autor: Antoni Sobkowicz)
+# 2019/2020 - Zadanie 6 - # Tablice i dziedziczenie 
+# Autor: Antoni Sobkowicz
 
 Twoim zadaniem jest napisanie dwóch klas implementujących metody tak, 
 aby napisane testy jednostkowe wykonały się poprawnie. Sygnatury klas to:
