@@ -13,20 +13,16 @@ if (Przesylka instanceof List) {
 ```
 
 - zmienna liczba argumentow
-
-  Deklaracja funkcji:
 ```java
+ // deklaracja
  public void myMethod(String... strings){
     // method body
-}
-```
+ }
 
-  Wolanie funkcji:
-
-```java
-myMethod(); // Likely useless, but possible
-myMethod("one", "two", "three");
-myMethod("solo");
-myMethod(new String[]{"a", "b", "c"});
+ // wolanie
+ myMethod(); // Likely useless, but possible
+ myMethod("one", "two", "three");
+ myMethod("solo");
+ myMethod(new String[]{"a", "b", "c"});
 ```
 
