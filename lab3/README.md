@@ -1,4 +1,6 @@
-# 2018/2019 - Zadanie 3 - Biblioteka
+# 2019/2020 - Zadanie 3 - Biblioteka
+
+Szczegoly w lab3.rtf
 
 
 ## Wskazówki
