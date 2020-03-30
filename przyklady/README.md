@@ -12,12 +12,17 @@ if (Przesylka instanceof List) {
 }
 ```
 
-- zmienna ilosc argumentow
+- zmienna liczba` argumentow
+Deklaracja funkcji:
 ```java
  public void myMethod(String... strings){
     // method body
 }
+```
 
+Wolanie funkcji:
+
+```java
 myMethod(); // Likely useless, but possible
 myMethod("one", "two", "three");
 myMethod("solo");
