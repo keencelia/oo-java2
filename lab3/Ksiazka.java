@@ -7,12 +7,25 @@ public class Ksiazka {
     private String tytul;
     private String [] autorzy;
     final Integer id;
+    private int strony;
+    private Okladka okladka;
+
+    public enum Okladka {SOFT, HARD};
 
     Ksiazka(String tytul, String... autorzy) {
         id = ++globalCounter;
         this.tytul = tytul;
         this.autorzy = autorzy;
     }
+
+    Ksiazka(String tytul, int strony, Okladka okladka, String... autorzy ) {
+        id = ++globalCounter;
+        this.tytul = tytul;
+        this.autorzy = autorzy;
+        this.strony = strony;
+        this.okladka = okladka;
+    }
+
 
     public Integer getId() {
         return id;

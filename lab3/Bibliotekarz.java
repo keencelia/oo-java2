@@ -83,9 +83,9 @@ public class Bibliotekarz {
         return false;
     }
 
-    public Ksiazka utworzKsiazka(String tytul, String [] autorzy) {
+    public Ksiazka utworzKsiazka(String tytul, int strony, Ksiazka.Okladka okladka, String [] autorzy) {
 
-        Ksiazka k = new Ksiazka(tytul, autorzy);
+        Ksiazka k = new Ksiazka(tytul, strony, okladka, autorzy);
         try {
             oddaj(k);
         }
@@ -103,7 +103,7 @@ public class Bibliotekarz {
         Set <String> tytuly = biblioteka.getSkorowidz().getTytuly();
 
         if (tytuly.isEmpty()) {
-            tytul = "Wiersze";
+            tytul = "Ballady i romanse";
         }
         else {
             int randomTytul = ran.nextInt(tytuly.size());
@@ -120,7 +120,10 @@ public class Bibliotekarz {
             autor = (String) autorzy.toArray()[randomAutor];
         }
 
-        Ksiazka k = new Ksiazka(tytul, autor);
+        int strony = ran.nextInt(1000)+10;
+        Ksiazka.Okladka okladka = Ksiazka.Okladka.values()[ran.nextInt(2)];
+
+        Ksiazka k = new Ksiazka(tytul,strony, okladka,  autor);
 
         try {
             oddaj(k);
