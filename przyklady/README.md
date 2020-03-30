@@ -6,8 +6,8 @@ Przydatne w zadaniach:
 
 - instanceof
 ```java
-
-if (Przesylka instanceof List) {
+Przesylka przesylka = lista.get(i);
+if (przesylka instanceof List) {
    /// do somethimg
 }
 ```
