@@ -17,6 +17,7 @@ if (przesylka instanceof List) {
  // deklaracja
  public void myMethod(String... strings){
     // method body
+    String [] myStrings = strings;
  }
 
  // wolanie
