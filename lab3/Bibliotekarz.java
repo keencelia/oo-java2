@@ -63,6 +63,33 @@ public class Bibliotekarz {
 
         Skorowidz skorowidz = biblioteka.getSkorowidz();
 
+        Random ran = new Random();
+        for (int attempts = 0; attempts < 3; attempts++) {
+            int i = ran.nextInt(biblioteka.getRegaly().length);
+            int j = ran.nextInt(biblioteka.getRegal(i).getPolki().length);
+
+            Integer pozycja = biblioteka.getRegal(i).getPolka(j).dodajKsizka(k.getId());
+
+            if (pozycja != null) {
+                Skorowidz.Pozycja poz = skorowidz.utworz(i,j,pozycja);
+                skorowidz.dodaj(k,poz);
+                return true;
+            }
+        }
+
+        biblioteka.getSmietnik().addKsiazka(k);
+
+        return false;
+    }
+
+    public boolean dodaj(Ksiazka k) throws Exception {
+
+        if (biblioteka == null) {
+            throw new Exception("Bibliotekarz nie pracuje w bibliotece");
+        }
+
+        Skorowidz skorowidz = biblioteka.getSkorowidz();
+
         for (int attempts = 0; attempts < 3; attempts++) {
             for (int i = 0; i < biblioteka.getRegaly().length; i++) {
                 for (int j = 0; j < biblioteka.getRegal(i).getPolki().length; j++) {
@@ -87,7 +114,7 @@ public class Bibliotekarz {
 
         Ksiazka k = new Ksiazka(tytul, strony, okladka, autorzy);
         try {
-            oddaj(k);
+            dodaj(k);
         }
         catch (Exception e) {
             // TODO:
@@ -126,7 +153,7 @@ public class Bibliotekarz {
         Ksiazka k = new Ksiazka(tytul,strony, okladka,  autor);
 
         try {
-            oddaj(k);
+            dodaj(k);
         }
         catch (Exception e) {
             // TODO:
