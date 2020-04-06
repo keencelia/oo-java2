@@ -34,27 +34,27 @@ Do Śmietnika trafiają książki, które nie mogą być wstawione do półki (n
 *	Wypożycza książkę o zadanym tytule
 
 ### Scenariusz:
-1	Bibliotekarz tworzy losowo 100 książek
-2	Bibliotekarz wstawia 50 książek do losowych miejsc i 50 w trybie "pierwszy lepszy"
-3	10 Czytelników wypożycza losową liczbę (1-5) książek o zadanym tytule (wylosowanym z zestawu pięciu tytułów) (za pośrednictwem Bibliotekarza) książkę
-4	Bibliotekarz tworzy losowo 100 książek
-5	Bibliotekarz wstawia 50 książek do losowych miejsc i 50 w trybie "pierwszy lepszy"
-6	10 Czytelników wypożycza po kolei po książce czytelników wypożycza po jednej książce wylosowanej ze Skorowidza
-7	Wszyscy czytelnicy zwracają po kolei wszystkie książki. Bibliotekarz wstawia je z prawdopodobieństwem 0.5 do losowej półki w losowym regale. Jeśli
-8	Bibliotekarz wypisuje zawartość Biblioteki i Śmietnika
+1.	Bibliotekarz tworzy losowo 100 książek
+2.	Bibliotekarz wstawia 50 książek do losowych miejsc i 50 w trybie "pierwszy lepszy"
+3.	10 Czytelników wypożycza losową liczbę (1-5) książek o zadanym tytule (wylosowanym z zestawu pięciu tytułów) (za pośrednictwem Bibliotekarza) książkę
+4.	Bibliotekarz tworzy losowo 100 książek
+5.	Bibliotekarz wstawia 50 książek do losowych miejsc i 50 w trybie "pierwszy lepszy"
+6.	10 Czytelników wypożycza po kolei po książce czytelników wypożycza po jednej książce wylosowanej ze Skorowidza
+7.	Wszyscy czytelnicy zwracają po kolei wszystkie książki. Bibliotekarz wstawia je z prawdopodobieństwem 0.5 do losowej półki w losowym regale. Jeśli
+8.	Bibliotekarz wypisuje zawartość Biblioteki i Śmietnika
 
 ### Zestawy tytułów:
-1	Jeanne Boyarski, Scott Selikoff; Oracle Certified Professional; 655 stron; obwoluta miękka
-2	Daniel Defoe; Robinson Cruzoe; 321 stron; obwoluta twarda
-3	Adam Mickiewicz; Dziady; 111; obwoluta miękka
-4	Andreas M. Antonopoulos; Bitcoin dla zaawansowanych; 368; obwoluta miękka
-5	Anna Lewoc; Angielski dla specjalistów IT; 221; obwoluta twarda
+1.	Jeanne Boyarski, Scott Selikoff; Oracle Certified Professional; 655 stron; obwoluta miękka
+2.	Daniel Defoe; Robinson Cruzoe; 321 stron; obwoluta twarda
+3.	Adam Mickiewicz; Dziady; 111; obwoluta miękka
+4.	Andreas M. Antonopoulos; Bitcoin dla zaawansowanych; 368; obwoluta miękka
+5.	Anna Lewoc; Angielski dla specjalistów IT; 221; obwoluta twarda
 
 ### Uwagi:
-1	Każda z operacji jest logowana na konsolę.
-2	Każda nowa lokalizacja książki trafia do Skorowidza
-3	Po wypożyczeniu książki, jej miejsce pozostaje zwolnione (inna książka może zostać tam włożona). Po zwrocie książki zyskuje ona nowe położenie, wraz z aktualizacją skorowidza.
-4	W kwestiach nie regulowanych powyższymi specyfikacjami, obowiązuje dowolność wyboru.
+1.	Każda z operacji jest logowana na konsolę.
+2.	Każda nowa lokalizacja książki trafia do Skorowidza
+3.	Po wypożyczeniu książki, jej miejsce pozostaje zwolnione (inna książka może zostać tam włożona). Po zwrocie książki zyskuje ona nowe położenie, wraz z aktualizacją skorowidza.
+4.	W kwestiach nie regulowanych powyższymi specyfikacjami, obowiązuje dowolność wyboru.
 
 
 ## Wskazówki
