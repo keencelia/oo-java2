@@ -90,17 +90,14 @@ public class Bibliotekarz {
 
         Skorowidz skorowidz = biblioteka.getSkorowidz();
 
-        for (int attempts = 0; attempts < 3; attempts++) {
-            for (int i = 0; i < biblioteka.getRegaly().length; i++) {
-                for (int j = 0; j < biblioteka.getRegal(i).getPolki().length; j++) {
-                    Integer pozycja = biblioteka.getRegal(i).getPolka(j).dodajKsizka(k.getId());
+        for (int i = 0; i < biblioteka.getRegaly().length; i++) {
+            for (int j = 0; j < biblioteka.getRegal(i).getPolki().length; j++) {
+                Integer pozpol = biblioteka.getRegal(i).getPolka(j).dodajKsizka(k.getId());
 
-                    if (pozycja != null) {
-                        Skorowidz.Pozycja poz = skorowidz.utworz(i,j,pozycja);
-                        skorowidz.dodaj(k,poz);
-                        return true;
-                    }
-
+                if (pozpol != null) {
+                    Skorowidz.Pozycja poz = skorowidz.utworz(i,j,pozpol);
+                    skorowidz.dodaj(k,poz);
+                    return true;
                 }
             }
         }
