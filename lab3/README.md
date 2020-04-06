@@ -1,6 +1,6 @@
 # 2019/2020 - Zadanie 3 - Biblioteka
 
-##Historia
+## Historia
 
 W bibliotece znajdują się następujące elementy:
 	*	Książki (zawierają informacje takie jak: tytuł, liczbę stron, rodzaj obwoluty (twarda, miękka), autorzy)
@@ -20,7 +20,7 @@ Czytelnik wie o bibliotece, książkach i bibliotekarzu, za którego pośrednict
 Do Skorowidza trafiają aktualne lokalizacje książek.
 Do Śmietnika trafiają książki, które nie mogą być wstawione do półki (np. kolejna próba wstawienia książki się nie powiodła)
 
-###Możliwe akcje:
+### Możliwe akcje:
 	1	Bibliotekarz:
 	*	Tworzy nową książkę w oparciu o wylosowane parmetry (5 gotowych tytułów, autorów i wszystkich innych potrzebnych elementów)
 	*	Wstawia książkę do pierwszego wolnego miejsca na półce w regale i wypisuje stosowny komunikat. Jeżeli nie ma miejsca, to bezowocnie kończy operację i wyświetla na konsoli stosowany komunikat.
@@ -32,7 +32,7 @@ Do Śmietnika trafiają książki, które nie mogą być wstawione do półki (n
 	*	Wypożycza pierwszą lepszą książkę
 	*	Wypożycza książkę o zadanym tytule
 
-###Scenariusz:
+### Scenariusz:
 	1	Bibliotekarz tworzy losowo 100 książek
 	2	Bibliotekarz wstawia 50 książek do losowych miejsc i 50 w trybie "pierwszy lepszy"
 	3	10 Czytelników wypożycza losową liczbę (1-5) książek o zadanym tytule (wylosowanym z zestawu pięciu tytułów) (za pośrednictwem Bibliotekarza) książkę
@@ -42,14 +42,14 @@ Do Śmietnika trafiają książki, które nie mogą być wstawione do półki (n
 	7	Wszyscy czytelnicy zwracają po kolei wszystkie książki. Bibliotekarz wstawia je z prawdopodobieństwem 0.5 do losowej półki w losowym regale. Jeśli
 	8	Bibliotekarz wypisuje zawartość Biblioteki i Śmietnika
 
-###Zestawy tytułów:
+### Zestawy tytułów:
 	1	Jeanne Boyarski, Scott Selikoff; Oracle Certified Professional; 655 stron; obwoluta miękka
 	2	Daniel Defoe; Robinson Cruzoe; 321 stron; obwoluta twarda
 	3	Adam Mickiewicz; Dziady; 111; obwoluta miękka
 	4	Andreas M. Antonopoulos; Bitcoin dla zaawansowanych; 368; obwoluta miękka
 	5	Anna Lewoc; Angielski dla specjalistów IT; 221; obwoluta twarda
 
-###Uwagi:
+### Uwagi:
 	1	Każda z operacji jest logowana na konsolę.
 	2	Każda nowa lokalizacja książki trafia do Skorowidza
 	3	Po wypożyczeniu książki, jej miejsce pozostaje zwolnione (inna książka może zostać tam włożona). Po zwrocie książki zyskuje ona nowe położenie, wraz z aktualizacją skorowidza.
