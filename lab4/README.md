@@ -1,4 +1,4 @@
-# 2018/2019 - Zadanie 4 - Poczta
+# 2019/2020 - Zadanie 4 - Poczta
 
 ##Poczta
 Dany jest hipotetyczny model mocno uproszczonego urzędu pocztowego. Instytucja ta ma do rozdysponowania Paczki, Listy i Przekazy. Robi to za pomocą różnie zaawansowanych doręczycieli takich jak: listonosz, chłopiec na posyłki i kurier. Każdy z nich ma możliwość dostarczania różnych typów przesyłek, swoje własne zwyczaje i wymagania. Może się zdarzyć tak, że doręczyciel nie wykona zadania. Wtedy wraca Proces jest więc iteracyjny: Każdemu doręczycielowi poczta losuje maksymalną liczbę przesyłek, które może on zabrać na miasto (wybrane typy przesyłem). Następnie (z pewnym prawdopodobieństwem) roznosi on te przesyłki i wraca do urzędu. Zwraca niedoręczone przesyłki do głównej puli. W kolejnej iteracji proces się powtarza... do skutku.
