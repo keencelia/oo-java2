@@ -16,7 +16,13 @@ public class Czytelnik {
 
     public boolean wypozycz(String title) {
         Bibliotekarz b = mojaBiblioteka.getBibliotekarz();
-        Ksiazka k = b.wypozycz(title);
+        Ksiazka k = null;
+
+        try {
+            b.wypozycz(title, this);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         if (k != null) {
             mojeKsiazki.add(k);
@@ -28,7 +34,9 @@ public class Czytelnik {
 
     public boolean wypozycz(String title, String [] autorzy) {
         Bibliotekarz b = mojaBiblioteka.getBibliotekarz();
-        Ksiazka k = b.wypozycz(title, autorzy);
+        Ksiazka k = null;
+
+                b.wypozycz(title, autorzy, this);
 
         if (k != null) {
             mojeKsiazki.add(k);
@@ -44,7 +52,12 @@ public class Czytelnik {
             return false;
         }
         Bibliotekarz b = mojaBiblioteka.getBibliotekarz();
-        b.oddaj(k);
+
+        try {
+            b.oddaj(k);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         return mojeKsiazki.remove(k);
     }

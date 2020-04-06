@@ -16,6 +16,11 @@ public class Biblioteka {
     private Bibliotekarz bibliotekarz = null;
 
     public static Biblioteka getBiblioteka() {
+        if (mainBiblioteka.getBibliotekarz()== null) {
+            // let's set somebody
+            Osoba wozny = new Osoba();
+            mainBiblioteka.zatrudnij(new Bibliotekarz(wozny));
+        }
         return mainBiblioteka;
     }
 
@@ -31,7 +36,7 @@ public class Biblioteka {
         return czytelnik;
     }
 
-    public void pracuje(Bibliotekarz b) {
+    public void zatrudnij(Bibliotekarz b) {
         bibliotekarz = b;
     }
 

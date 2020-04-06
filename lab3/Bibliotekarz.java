@@ -19,10 +19,10 @@ public class Bibliotekarz {
 
     public void pracujw(Biblioteka b) {
         this.biblioteka = b;
-        b.pracuje(this);
+        b.zatrudnij(this);
     }
 
-    public Ksiazka wypozycz(String title, String [] author) {
+    public Ksiazka wypozycz(String title, String [] author, Czytelnik c) {
         // TODO:
         return null;
     }
