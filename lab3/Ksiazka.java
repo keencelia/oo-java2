@@ -48,6 +48,7 @@ public class Ksiazka {
         return this.autorzy[i];
     }
 
-
-
+    public String[] getAutorzy() {
+        return autorzy;
+    }
 }

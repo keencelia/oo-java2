@@ -147,7 +147,7 @@ public class Bibliotekarz {
         int strony = ran.nextInt(1000)+10;
         Ksiazka.Okladka okladka = Ksiazka.Okladka.values()[ran.nextInt(2)];
 
-        Ksiazka k = new Ksiazka(tytul,strony, okladka,  autor);
+        Ksiazka k = new Ksiazka(tytul, strony, okladka,  autor);
 
         try {
             dodaj(k);

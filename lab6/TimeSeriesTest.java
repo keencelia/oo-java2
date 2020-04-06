@@ -1,7 +1,6 @@
 package mini.java.basic.arrays.test;
 
 import static org.junit.Assert.*;
-import static org.junit.Assert.assertTrue;
 
 public class TimeSeriesTest {
 
@@ -255,5 +254,28 @@ public class TimeSeriesTest {
         TimeSeries timeSeries1 = new AnonymousTimeSeries(5);
         assertTrue(timeSeries1.isAnonymous());
     }
+
+    /***
+     * Prosty average() - sprawdzenie czy osbsługuje pusta tablice
+     * @difficulty 1
+     */
+    @org.junit.Test
+    public void emptyDataEqual() {
+        int[] j = {};
+        TimeSeries timeSeries1 = new TimeSeries("TS1",j);
+        assertEquals(timeSeries1.average(), Double.NaN, 0.0);
+    }
+
+    /***
+     * Prosty average() - sprawdzenie czy osbsługuje tablice null
+     * @difficulty 1
+     */
+    @org.junit.Test
+    public void nullDataEqual() {
+        int[] j = null;
+        TimeSeries timeSeries1 = new TimeSeries("TS1",j);
+        assertEquals(timeSeries1.average(), Double.NaN, 0.0);
+    }
+
 
 }

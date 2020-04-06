@@ -1,6 +1,7 @@
 package mini.java.biblioteka;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 
@@ -19,7 +20,7 @@ public class Smietnik {
         return ksiazki;
     }
 
-    public void Oproznij() {
+    public void oproznij() {
         ksiazki.clear();
     }
 
@@ -31,6 +32,7 @@ public class Smietnik {
                 autorzy += k.getAutor(i);
             }
             System.out.println(k.getTytul() + autorzy );
+            // Arrays.toString(k.getAutorzy());
         }
     }
 

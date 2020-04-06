@@ -17,9 +17,9 @@ public class Biblioteka {
 
     public static Biblioteka getBiblioteka() {
         if (mainBiblioteka.getBibliotekarz()== null) {
-            // let's set somebody
+            // let's hire anybody
             Osoba wozny = new Osoba();
-            mainBiblioteka.zatrudnij(new Bibliotekarz(wozny));
+            mainBiblioteka.zatrudnij(new Bibliotekarz(wozny, mainBiblioteka));
         }
         return mainBiblioteka;
     }
