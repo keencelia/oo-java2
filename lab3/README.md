@@ -21,14 +21,14 @@ Do Skorowidza trafiają aktualne lokalizacje książek.
 Do Śmietnika trafiają książki, które nie mogą być wstawione do półki (np. kolejna próba wstawienia książki się nie powiodła)
 
 ### Możliwe akcje:
-	1	Bibliotekarz:
+####	Bibliotekarz:
 	*	Tworzy nową książkę w oparciu o wylosowane parmetry (5 gotowych tytułów, autorów i wszystkich innych potrzebnych elementów)
 	*	Wstawia książkę do pierwszego wolnego miejsca na półce w regale i wypisuje stosowny komunikat. Jeżeli nie ma miejsca, to bezowocnie kończy operację i wyświetla na konsoli stosowany komunikat.
 	*	Wstawia książkę do losowo wybranego miejsca (regału, półki i miejsca w półce). Jeżeli miejsce jest już zajęte (stoi tam inna książka) ponawia proces. W przypadku powtórzenia się tej samej sytuacji, to bezowocnie kończy operację i wyświetla na konsoli stosowany komunikat.
 	*	Poszukuje książki o zadanym tytule. W przypadku powodzenia zwraca znalezioną pozycję. W przeciwnym wypadku operacja nie zostaje wykonana.
 	*	Wypisuje na konsolę listę wszystkich książek wraz z ich lokalizacją.
 	*	Wypisuje na konsolę listę książek w śmietniku.
-	2	Czytelnik:
+####	Czytelnik:
 	*	Wypożycza pierwszą lepszą książkę
 	*	Wypożycza książkę o zadanym tytule
 
