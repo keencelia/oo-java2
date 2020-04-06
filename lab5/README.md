@@ -25,8 +25,8 @@ Trafienie:
 jak ktoś ma ochotę i zna reguły
 
 Następnie zaimplementować dwóch graczy,  z dwoma strategiami:
-*gracza ostrożnego, który wyznacza sobie budżet i stawia małe (losowe sumy) i gra aż wszystko przegra,  wtedy przestaje
-*gracza stratega, który zaczyna od małej sumy (1),  podwaja zakład przy każdej przegranej, przy wygranej wraca do małej sumy, aż wygra określoną sumę albo zbankrutuje
+* gracza ostrożnego, który wyznacza sobie budżet i stawia małe (losowe sumy) i gra aż wszystko przegra,  wtedy przestaje
+* gracza stratega, który zaczyna od małej sumy (1),  podwaja zakład przy każdej przegranej, przy wygranej wraca do małej sumy, aż wygra określoną sumę albo zbankrutuje
 
 
 
