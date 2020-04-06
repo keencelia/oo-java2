@@ -42,6 +42,8 @@ public class PasswordGroup {
 }
 ```
 
+Zadania punktowane są w zależności od adnotacji @difficulty. Kod będzie także sprawdzony pod kątem oryginalnosci i jakości. Komentarze mile widziane.
+
 ## Wskazówki
 - Korzystaj z możliwości generowania kodu przez IntelliJ - ułatwia 
 to w sposób znaczący pracę. Pamiętaj, że kod nie skompiluje się jeżeli metod nie będzie - 

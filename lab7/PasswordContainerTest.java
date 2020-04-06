@@ -1,4 +1,4 @@
-package mini.java.basic.arrays.test.y2020;
+package mini.java.basic.arrays.test;
 
 import static org.junit.Assert.*;
 
@@ -94,7 +94,7 @@ public class PasswordContainerTest {
 
     /***
      * Implementacja interfejsu Nameable
-     * @difficulty 1
+     * @difficulty 2
      */
     @org.junit.Test
     public void nameableArrayPinPasswordImplementation() {
@@ -109,7 +109,7 @@ public class PasswordContainerTest {
 
     /***
      * Implementacja interfejsu Nameable
-     * @difficulty 1
+     * @difficulty 2
      */
     @org.junit.Test
     public void nameableArrayPinPasswordImplementationFalse() {
@@ -153,7 +153,7 @@ public class PasswordContainerTest {
     }
     /***
      * Implementacja klasy PasswordGroup - implementacja interfejsu Nameable
-     * @difficulty 1
+     * @difficulty 2
      */
     @org.junit.Test
     public void nameableArrayPasswordsAndGroupImplementationFalse() {
