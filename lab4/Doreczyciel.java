@@ -51,31 +51,43 @@ public abstract class Doreczyciel {
         this.zajety = zajety;
     }
 
+    public int getMaxPrzesylki() {
+        return maxPrzesylki;
+    }
+
+    public int getIleMa() {
+        return this.doDostarczenia.size();
+    }
+
+    public boolean akceptuje(Przesylka p) {
+        Boolean a = null;
+        Class c = p.getClass();
+
+        while (c != null) {
+            if ((a = akceptuje.get(c)) != null) break;
+            c = c.getSuperclass();
+        }
+
+        if ((a != null && !a.booleanValue()))
+            return false;
+        return true;
+    }
+
+    protected double jakCzestoDostarczam(Przesylka p) {
+        Double prob = dostarczam.get(p.getClass());
+        Class c = p.getClass();
+        while (c != null) {
+            if ((prob = dostarczam.get(c)) != null) break;
+            c = c.getSuperclass();
+        }
+
+        if (prob != null) return prob;
+        return 1.0;
+    }
+
     protected boolean pobierz() {
         List<Przesylka> przesylki = poczta.dajPrzesylki(this);
-        int ile=this.doDostarczenia.size();
-        List<String> nd = new ArrayList<String>();
-
-        for (int i = 0; i < przesylki.size() && ile < this.maxPrzesylki; i++) {
-            Przesylka p = przesylki.get(i);
-            Boolean a = null;
-            Class c = p.getClass();
-
-            while (c != null) {
-                if ((a = akceptuje.get(c)) != null) break;
-                c = c.getSuperclass();
-            }
-            if ((a != null && !a.booleanValue())) {
-                if (!nd.contains(this.getClass().getSimpleName())) {
-                    System.out.println(this.getClass().getSimpleName().toString() + ": nie dostarczam " + c.getSimpleName().toString());
-                    nd.add(this.getClass().getSimpleName());
-                }
-            } else {
-                przesylki.remove(p);
-                doDostarczenia.add(p);
-                ile++;
-            }
-        }
+        doDostarczenia.addAll(przesylki);
         return (!doDostarczenia.isEmpty());
     }
 
@@ -83,27 +95,23 @@ public abstract class Doreczyciel {
         List<Przesylka> niedostarczone = new ArrayList<Przesylka>();
         int dostarczone = 0;
         for (Przesylka p: this.doDostarczenia) {
-            Double prob = dostarczam.get(p.getClass());
-            Class c = p.getClass();
-            while (c != null) {
-                if ((prob = dostarczam.get(c)) != null) break;
-                c = c.getSuperclass();
-            }
+            double prob = jakCzestoDostarczam(p);
 
-            if (prob != null && Math.random() > prob) {
+            if (Math.random() > prob) {
                 niedostarczone.add(p);
             }
             else {
                 dostarczone++;
             }
         }
-        System.out.println(this.getClass().getSimpleName().toString() + ": dostarczy1em " + dostarczone + " z " + this.doDostarczenia.size() + " przesylek");
+        System.out.println(this.getClass().getSimpleName().toString() +
+                ": dostarczy1em " + dostarczone + " z " + this.doDostarczenia.size() + " przesylek");
         this.doDostarczenia.clear();
         return poczta.odbierzPrzesylki(niedostarczone);
     }
 
 
-    public void pracuj() {
+    public void doreczPrzesylki() {
         if (!wpracy || zajety) return;
 
         zajety = true;

@@ -30,22 +30,51 @@ public class Poczta {
         this.przesylki.addAll(przesylki);
     }
 
-    public List <Przesylka> dajPrzesylki(Doreczyciel d) {
-        return przesylki;
+    // public List <Przesylka> dajPrzesylki() {
+    //     return przesylki;
+    // }
+
+    public int ileMa() {
+        return this.przesylki.size();
     }
 
+    public List <Przesylka> dajPrzesylki(Doreczyciel d) {
+        int ile=d.getIleMa();
+        List<Przesylka> dlaDoreczyciela = new ArrayList<Przesylka>();
+        List<String> nd = new ArrayList<String>(); // żeby nie duplikowac informacji
+
+        for (int i = 0; i < przesylki.size() && ile < d.getMaxPrzesylki(); i++) {
+            Przesylka p = przesylki.get(i);
+
+            if (!d.akceptuje(p)) {
+                if (!nd.contains(this.getClass().getSimpleName())) {
+                    System.out.println(d.getClass().getSimpleName().toString() +
+                            ": nie dostarcza " + p.getClass().getSimpleName().toString());
+                    nd.add(this.getClass().getSimpleName());
+                }
+            } else {
+                przesylki.remove(p);
+                dlaDoreczyciela.add(p);
+                ile++;
+            }
+        }
+
+        return dlaDoreczyciela;
+    }
+
+    /**
+     *
+     * @param przesylki
+     * @return
+     */
     public boolean odbierzPrzesylki(List <Przesylka> przesylki) {
         this.przesylki.addAll(przesylki);
         return true;
     }
 
-    public boolean odbierzPrzesylki(Przesylka przesylka) {
-        this.przesylki.add(przesylka);
-        return true;
-    }
-
-
-
+    /**
+     *
+     */
     public void doreczPrzesylki() {
 
         int pracuje = 0;
@@ -63,13 +92,11 @@ public class Poczta {
 
         for (Doreczyciel d: this.doreczyciele) {
             if (d.isWpracy() && !d.isZajety()) {
-                d.pracuj();
+                d.doreczPrzesylki();
             }
         }
 
         System.out.println("Zostalo " + przesylki.size() + " przesylek do dostarczenia");
-
-
 
     }
 
