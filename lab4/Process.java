@@ -60,6 +60,12 @@ public class Process {
 
         for (int i = 0; i < 1000; i++) {
             Random ran = new Random();
+            Przesylka p = new PaczkaCiezka(makeOsoba(), makeOsoba(), ran.nextInt(100), ran.nextInt(20), ran.nextInt(20), ran.nextInt(20));
+            przesylki.add(p);
+        }
+
+        for (int i = 0; i < 100; i++) {
+            Random ran = new Random();
             Przesylka p = new Paczka(makeOsoba(), makeOsoba(), ran.nextInt(20), ran.nextInt(20), ran.nextInt(20));
             przesylki.add(p);
         }
@@ -69,6 +75,7 @@ public class Process {
             Przesylka p = new Przekaz(makeOsoba(), makeOsoba(), ran.nextDouble());
             przesylki.add(p);
         }
+
         for (int i = 0; i < 1000; i++) {
             Random ran = new Random();
             Przesylka p = new Wezwanie(makeOsoba(), makeOsoba(), "tresc"+i, "pouczenie"+i);

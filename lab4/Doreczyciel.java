@@ -59,29 +59,57 @@ public abstract class Doreczyciel {
         return this.doDostarczenia.size();
     }
 
+
+    /**
+     * sprawdza po kolei, wiec kolejnosć istotna
+     * @param p
+     * @return
+     */
     public boolean akceptuje(Przesylka p) {
+
+        Boolean a=null;
+        for (Class c: this.akceptuje.keySet()) {
+            if (c.isInstance(p)) {
+                a = this.akceptuje.get(c);
+                return a;
+            }
+        }
+
+        return true;
+    }
+
+    /**
+     * gorszy sposób ale też działa
+     * @param p
+     * @return
+     */
+    public boolean akceptuje2(Przesylka p) {
         Boolean a = null;
         Class c = p.getClass();
 
         while (c != null) {
-            if ((a = akceptuje.get(c)) != null) break;
+            if ((a = this.akceptuje.get(c)) != null) break;
             c = c.getSuperclass();
         }
-
         if ((a != null && !a.booleanValue()))
             return false;
         return true;
     }
 
+    /**
+     *
+     * @param p
+     * @return
+     */
     protected double jakCzestoDostarczam(Przesylka p) {
-        Double prob = dostarczam.get(p.getClass());
-        Class c = p.getClass();
-        while (c != null) {
-            if ((prob = dostarczam.get(c)) != null) break;
-            c = c.getSuperclass();
+        Double prob = null;
+        for (Class c: this.dostarczam.keySet()) {
+            if (c.isInstance(p)) {
+                prob = this.dostarczam.get(c);
+                return prob;
+            }
         }
 
-        if (prob != null) return prob;
         return 1.0;
     }
 

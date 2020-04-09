@@ -11,4 +11,5 @@ public class Kurier extends Doreczyciel {
         super.dostarczam(Paczka.class, 0.7);
         super.dostarczam(Przekaz.class, 0.5);
     }
+
 }

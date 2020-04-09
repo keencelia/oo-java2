@@ -30,6 +30,7 @@ public class Poczta {
         this.przesylki.addAll(przesylki);
     }
 
+    // za dużo kontroli dla doreczyciela
     // public List <Przesylka> dajPrzesylki() {
     //     return przesylki;
     // }
@@ -77,26 +78,28 @@ public class Poczta {
      */
     public void doreczPrzesylki() {
 
-        int pracuje = 0;
-        int niepracuje = 0;
+        int pracuje = 0, niepracuje=0;
+
         for (Doreczyciel d: this.doreczyciele) {
             if (d.isWpracy() && !d.isZajety()) pracuje++;
             else niepracuje++;
         }
 
         System.out.println("Pracuje " + pracuje + " doreczycieli");
-        if (niepracuje > 0)
-        System.out.println("Nie pracuje " + niepracuje + " doreczycieli");
+        if (niepracuje > 0) {
+            System.out.println("Nie pracuje " + niepracuje + " doreczycieli");
+        }
 
         System.out.println("Jest " + przesylki.size() + " przesylek do dostarczenia");
 
-        for (Doreczyciel d: this.doreczyciele) {
-            if (d.isWpracy() && !d.isZajety()) {
-                d.doreczPrzesylki();
+        while (przesylki.size() > 0) {
+            for (Doreczyciel d : this.doreczyciele) {
+                if (d.isWpracy() && !d.isZajety()) {
+                    d.doreczPrzesylki();
+                }
             }
+            System.out.println("Zostalo " + przesylki.size() + " przesylek do dostarczenia");
         }
-
-        System.out.println("Zostalo " + przesylki.size() + " przesylek do dostarczenia");
 
     }
 

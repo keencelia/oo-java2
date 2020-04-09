@@ -1,11 +1,9 @@
 package mini.java.poczta;
 
-public class Anonim extends Przesylka {
+public class Anonim extends PrzesylkaListowa {
 
-    private String tresc;
-
-    public Anonim(Osoba adresat, String tresc) {
-        super(null, adresat);
-        this.tresc = tresc;
+    public Anonim(Osoba adresat, String tresc)  {
+        super(null, adresat, tresc, "Anonim", "");
     }
+
 }
