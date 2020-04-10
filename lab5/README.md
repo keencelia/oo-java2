@@ -9,16 +9,16 @@ Następnie zaimplementować jedną grę hazardową do wyboru:
 #### jednoręki bandyta
 Gracz obstawia trzy litery (od A do C) i kwotę za jaką gra (jest ona pobierana z jego konta na które wcześniej wrzucił pieniądze). Automat losuje trzy litery z przedziału (A-C).
 Trafienie:
-	* Jednej litery powoduje, że na konto gracza przekazywana jest trzykrotność postawionej sumy.
-	* Dwóch liter powoduje, że na konto gracza przekazywana jest dziewięciokrotność postawionej sumy.
-	* Trzech liter powoduje, że na konto gracza przekazywana jest dwudziestokrotność postawionej sumy.
+* Jednej litery powoduje, że na konto gracza przekazywana jest trzykrotność postawionej sumy.
+* Dwóch liter powoduje, że na konto gracza przekazywana jest dziewięciokrotność postawionej sumy.
+* Trzech liter powoduje, że na konto gracza przekazywana jest dwudziestokrotność postawionej sumy.
 
 #### ruletka
 Zawiera liczby 1:36 w dwóch kolorach, czarnym i czerwonym (18 w każdym kolorze) oraz 0. (Np. w prawdziwej ruletce kolor czarny: 2,4,6,8,10,11,13,15,17,20,22,24,26,28,29,31,33,35)
 Gracz obstawia liczbę (od 1 do 36) lub kolor (czarny, czerwony) i kwotę za jaką gra (jest ona pobierana z jego konta na które wcześniej wrzucił pieniądze). 	Automat losuje liczbę (0:36). Jeśli 0, wygrywa zawsze kasyno.
 Trafienie:
-	* Koloru powoduje, że na konto gracza przekazywana jest dwukrotność postawionej sumy.
-	* Liczby powoduje, że na konto gracza przekazywana jest dziesięciokrotność postawionej sumy.
+* Koloru powoduje, że na konto gracza przekazywana jest dwukrotność postawionej sumy.
+* Liczby powoduje, że na konto gracza przekazywana jest dziesięciokrotność postawionej sumy.
 
 
 #### oczko (blackjack) 
