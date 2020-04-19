@@ -82,7 +82,7 @@ public class KwantylatorTest {
     }
 
     /***
-     * Prosty equals() - sprawdzenie dla obiektów nieoczywistych
+     * Prosty equals() - sprawdzenie dla obiektów z pliku
      * @difficulty 5
      */
     @org.junit.Test
