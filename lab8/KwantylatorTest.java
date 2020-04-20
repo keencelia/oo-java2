@@ -95,7 +95,7 @@ public class KwantylatorTest {
     @org.junit.Test
     public void someObjectList() {
         var nc1 = new My2DObject(0.5, 0.7);
-        var nc2 = new My2DObject(0.25, 0.75);
+        var nc2 = new My2DObject(0.5, 0.6);
         var nc3 = new My2DObject(0.9, 0.71);
 
         var kw1 = new Kwantylator<My2DObject>(nc1,nc2,nc3);
