@@ -1,4 +1,4 @@
-# 2019/2020 - Zadanie 8 - Generyki i pliki
+# 2019/2020 - Zadanie 8 - Generyki, pliki, strumienie i wyjątki
 
 Twoim zadaniem jest napisanie trzech klas implementujących metody tak, 
 aby napisane testy jednostkowe wykonały się poprawnie. 
