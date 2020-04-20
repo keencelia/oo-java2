@@ -1,6 +1,7 @@
 package mini.java.lab8.test;
 
-import mini.java.lab8.FileKwantylator;
+import mini.java.lab8.FileDoubleKwantylator;
+import mini.java.lab8.FileObjectKwantylator;
 import mini.java.lab8.Kwantylator;
 import mini.java.lab8.My2DObject;
 
@@ -110,7 +111,7 @@ public class KwantylatorTest {
      * @difficulty 5
      */
     @org.junit.Test
-    public void someFile() {
+    public void someDoubleFile() {
 
         Double med = 0.0;
 
@@ -118,7 +119,7 @@ public class KwantylatorTest {
             File f = new File("liczby.txt");
 
             FileInputStream fin = new FileInputStream(f);
-            var kw1 = new FileKwantylator(fin);
+            var kw1 = new FileDoubleKwantylator(fin);
             fin.close();
 
             med = kw1.median();
@@ -130,6 +131,35 @@ public class KwantylatorTest {
         }
 
         assertEquals(med, 100, 0.3);
+
+    }
+
+    /***
+     * Prosty equals() - sprawdzenie dla obiektów nieoczywistych
+     * @difficulty 5
+     */
+    @org.junit.Test
+    public void someObjectFile() {
+
+        My2DObject med = null;
+
+        try {
+            File f = new File("obiekty.txt");
+
+            FileInputStream fin = new FileInputStream(f);
+            var kw1 = new FileObjectKwantylator(fin);
+            fin.close();
+
+            med = kw1.median();
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        assertEquals(med.getX1(), 0.018, 0.001);
+        assertEquals(med.getX2(), -1.058, 0.001);
 
     }
 

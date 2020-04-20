@@ -1,7 +1,9 @@
 # 2019/2020 - Zadanie 8 - Generyki i pliki
 
-Twoim zadaniem jest napisanie dwóch klas implementujących metody tak, 
+Twoim zadaniem jest napisanie trzech klas implementujących metody tak, 
 aby napisane testy jednostkowe wykonały się poprawnie. Sygnatury klas to:
+Dwa pliki z liczbami i obiektami (liczby.txt i obiekty.txt) muszą być umieszczone w odpowiednim katalogu
+w projekcie.
 
 ```java
 /***
@@ -19,8 +21,20 @@ class Kwantylator <T extends ?> {
 /***
 * Klasa ta pozwala obliczac kwantyle typu I dla danych typu Double z pliku
 */
-class FileKwantylator  {
+class FileDoubleKwantylator  {
     private Double [] data; // Dane 
+    
+    public median() {}; // Zwraca medianę
+    public kwantyl(double p) {}; // Zwraca kwantyl dla p: p w przedziale [0,1]
+}
+```
+
+```java
+/***
+* Klasa ta pozwala obliczac kwantyle typu I dla danych typu My2DObject z pliku
+*/
+class FileObjectKwantylator  {
+    private My2DObject [] data; // Dane 
     
     public median() {}; // Zwraca medianę
     public kwantyl(double p) {}; // Zwraca kwantyl dla p: p w przedziale [0,1]
