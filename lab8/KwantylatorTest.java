@@ -36,11 +36,35 @@ public class KwantylatorTest {
     }
 
     /***
-     * Prosty equals() - sprawdzenie dla nieparzystych
+     * Prosty equals() - sprawdzenie nullowych tablic
+     * @difficulty 1
+     */
+    @org.junit.Test
+    public void nullEquals() {
+        Integer [] data = null;
+        var kw1 = new Kwantylator<Integer>(data);
+        Integer median = kw1.median();
+        assertEquals(median, null);
+    }
+
+    /***
+     * Prosty equals() - sprawdzenie pustych tablic
+     * @difficulty 1
+     */
+    @org.junit.Test
+    public void emptyEquals() {
+        var kw1 = new Kwantylator<Integer>(new Integer[0]);
+        Integer median = kw1.median();
+        assertEquals(median, null);
+    }
+
+
+    /***
+     * Prosty equals() - sprawdzenie innych kwantyli
      * @difficulty 3
      */
     @org.junit.Test
-    public void doubleOddEquals() {
+    public void quantileEquals() {
         Double [] data = {1.2491061, 4.1050404, 2.0028673, 2.0147486, 0.5906676, 2.5623679, 2.0235319, 2.1096685, 2.5861802, 1.7931584};
         var kw1 = new Kwantylator<Double>(data);
         // int[] j = {1,2,3,4};
