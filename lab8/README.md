@@ -38,5 +38,3 @@ Pamiętaj o możliwości stawiania breakpointów.
 Najprościej, jeśli utworzysz nowy projekt, dodasz plik z testem i pozwolisz `Alt+Enter` 
 na nazwie pakietu wykonać swoją magię.
 
-
-## Powodzenia!
