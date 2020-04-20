@@ -82,7 +82,7 @@ public class KwantylatorTest {
     }
 
     /***
-     * Prosty equals() - sprawdzenie dla obiektów z pliku
+     * Prosty equals() - sprawdzenie dla obiektów nieoczywistych
      * @difficulty 5
      */
     @org.junit.Test
@@ -94,10 +94,10 @@ public class KwantylatorTest {
             File f = new File("liczby.txt");
 
             FileInputStream fin = new FileInputStream(f);
-            Kwantylator kw1 = new FileKwantylator(fin);
+            var kw1 = new FileKwantylator(fin);
             fin.close();
 
-            med = (Double)kw1.median();
+            med = kw1.median();
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();

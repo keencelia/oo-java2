@@ -58,15 +58,13 @@ Do Śmietnika trafiają książki, które nie mogą być wstawione do półki (n
 
 
 ## Wskazówki
-- Korzystaj z możliwości generowania kodu przez IntelliJ - ułatwia 
-to w sposób znaczący pracę. Pamiętaj, że kod nie skompiluje się jeżeli metod nie będzie - 
-natomiast jeżeli nie będą nic robić, jedyne co może się stać to zły wynik testu 
-(albo zawieszenie się maszyny - z tym zawsze trzeba się liczyć 😉)
-- Uruchamiaj testy zawsze korzystając z opcji debug 🐛. 
+- Korzystaj z możliwości generowania kodu przez IntelliJ - ułatwia
+to w sposób znaczący pracę. 
+- Pamiętaj o zasadach programowania obiektowego (nie dawaj dostępu do atrybutów i metod bez konieczności).
+- Uruchamiaj testy zawsze korzystając z opcji debug.  
 Dzieki temu ławiej jest znaleźć i zrozumieć dlaczego program nie działa tak jak trzeba.
-Pamiętaj o możliwości stawiania breakpointów 🛑.
-- Pamiętaj o umiejscowieniu kodu w odpowiednim pakiecie. 
-Najprościej, jeśli utowrzysz nowy projekt, dodasz plik z testem i pozwolisz `Alt+Enter` 
-na nazwie pakietu wykonać swoją magię 
+Pamiętaj o możliwości stawiania breakpointów.
+- Pamiętaj o umiejscowieniu kodu w odpowiednim pakiecie.
+Najprościej, jeśli utworzysz nowy projekt, dodasz plik z testem i pozwolisz `Alt+Enter`
+na nazwie pakietu wykonać swoją magię.
 
-## Powodzenia!
