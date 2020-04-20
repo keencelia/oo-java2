@@ -10,7 +10,7 @@ aby napisane testy jednostkowe wykonały się poprawnie. Sygnatury klas to:
 class Kwantylator <T extends ?> {
     private T[] data; // Dane 
     
-    public median() {}; // Zwraca mediane
+    public median() {}; // Zwraca medianę
     public kwantyl(double p)() {}; // Zwraca kwantyl dla p: p w przedziale [0,1]
 }
 ```
@@ -22,8 +22,8 @@ class Kwantylator <T extends ?> {
 class FileKwantylator  {
     private Double [] data; // Dane 
     
-    public median() {}; // Zwraca największą wartość z serii
-    public kwantyl(double p) {}; // Zwraca kwantyl
+    public median() {}; // Zwraca medianę
+    public kwantyl(double p) {}; // Zwraca kwantyl dla p: p w przedziale [0,1]
 }
 ```
 
