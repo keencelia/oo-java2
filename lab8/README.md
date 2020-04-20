@@ -1,9 +1,9 @@
 # 2019/2020 - Zadanie 8 - Generyki i pliki
 
 Twoim zadaniem jest napisanie trzech klas implementujących metody tak, 
-aby napisane testy jednostkowe wykonały się poprawnie. Sygnatury klas to:
+aby napisane testy jednostkowe wykonały się poprawnie. 
 Dwa pliki z liczbami i obiektami (liczby.txt i obiekty.txt) muszą być umieszczone w odpowiednim katalogu
-w projekcie.
+w projekcie. Sygnatury klas to:
 
 ```java
 /***
