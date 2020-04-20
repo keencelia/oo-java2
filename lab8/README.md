@@ -5,7 +5,7 @@ aby napisane testy jednostkowe wykonały się poprawnie. Sygnatury klas to:
 
 ```java
 /***
-* Klasa ta reprezentuje tablice obiektów na których oblicza kwantyle
+* Klasa ta reprezentuje tablice obiektów na których oblicza kwantyle typu I
 */
 class Kwantylator <T extends ?> {
     private T[] data; // Dane 
@@ -17,7 +17,7 @@ class Kwantylator <T extends ?> {
 
 ```java
 /***
-* Klasa ta pozwala obliczac kwantyle dla danych typu Double z pliku
+* Klasa ta pozwala obliczac kwantyle typu I dla danych typu Double z pliku
 */
 class FileKwantylator  {
     private Double [] data; // Dane 
