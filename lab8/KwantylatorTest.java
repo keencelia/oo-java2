@@ -144,7 +144,7 @@ public class KwantylatorTest {
         My2DObject med = null;
 
         try {
-            File f = new File("obiekty.txt");
+            File f = new File("obiekty.bin");
 
             FileInputStream fin = new FileInputStream(f);
             var kw1 = new FileObjectKwantylator(fin);
