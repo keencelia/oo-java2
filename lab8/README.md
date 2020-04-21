@@ -2,8 +2,8 @@
 
 Twoim zadaniem jest napisanie trzech klas implementujących metody tak, 
 aby napisane testy jednostkowe wykonały się poprawnie. 
-Dwa pliki z liczbami i obiektami (liczby.txt i obiekty.txt) muszą być umieszczone w odpowiednim katalogu
-w projekcie. Obiekty.txt jest plikiem binarnym (pomyłka w nazwie). Sygnatury klas to:
+Dwa pliki z liczbami i obiektami (liczby.txt i obiekty.bin) muszą być umieszczone w odpowiednim katalogu
+w projekcie. Obiekty.bin jest plikiem binarnym. Sygnatury klas to:
 
 ```java
 /***
