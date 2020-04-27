@@ -19,7 +19,7 @@ class Kwantylator <T extends ?> {
 
 ```java
 /***
-* Klasa ta pozwala obliczac kwantyle typu I dla danych typu Double z pliku
+* Klasa ta pozwala obliczać kwantyle typu I dla danych typu Double z pliku, oraz zapisać rezultaty do pliku
 */
 class FileDoubleKwantylator  {
     private Double [] data; // Dane 
@@ -28,12 +28,17 @@ class FileDoubleKwantylator  {
     
     public median() {} // Zwraca medianę
     public kwantyl(double p) {} // Zwraca kwantyl dla p: p w przedziale [0,1]
+
+    public wypiszBinarnie(FileOutputStream fout, ...) {}
+
+    public wypiszTekstowo(FileWriter fout, ...) {}
+
 }
 ```
 
 ```java
 /***
-* Klasa ta pozwala obliczac kwantyle typu I dla danych typu My2DObject z pliku
+* Klasa ta pozwala obliczać kwantyle typu I dla danych typu My2DObject z pliku
 */
 class FileObjectKwantylator  {
     private My2DObject [] data; // Dane 
