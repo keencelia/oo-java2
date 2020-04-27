@@ -23,9 +23,11 @@ class Kwantylator <T extends ?> {
 */
 class FileDoubleKwantylator  {
     private Double [] data; // Dane 
+
+    public FileDoubleKwantylator(FileInputStream fin) {}
     
-    public median() {}; // Zwraca medianę
-    public kwantyl(double p) {}; // Zwraca kwantyl dla p: p w przedziale [0,1]
+    public median() {} // Zwraca medianę
+    public kwantyl(double p) {} // Zwraca kwantyl dla p: p w przedziale [0,1]
 }
 ```
 
@@ -35,19 +37,20 @@ class FileDoubleKwantylator  {
 */
 class FileObjectKwantylator  {
     private My2DObject [] data; // Dane 
+
+    public FileObjectKwantylator(FileInputStream fin) {}
     
-    public median() {}; // Zwraca medianę
-    public kwantyl(double p) {}; // Zwraca kwantyl dla p: p w przedziale [0,1]
+    public median() {} // Zwraca medianę
+    public kwantyl(double p) {} // Zwraca kwantyl dla p: p w przedziale [0,1]
 }
 ```
 
 ## Wskazówki
-- Korzystaj z możliwości generowania kodu przez IntelliJ - ułatwia 
-to w sposób znaczący pracę. 
+- Korzystaj z możliwości generowania kodu przez IntelliJ - ułatwia to w sposób znaczący pracę. 
 - Pamiętaj o zasadach programowania obiektowego (nie dawaj dostępu do atrybutów i metod bez konieczności).
-- Uruchamiaj testy zawsze korzystając z opcji debug. 
-Dzieki temu ławiej jest znaleźć i zrozumieć dlaczego program nie działa tak jak trzeba.
-Pamiętaj o możliwości stawiania breakpointów.
+- Stosuj dziedziczenie między klasami, gdy ma to sens
+- Uruchamiaj testy zawsze korzystając z opcji debug.  
+Dzieki temu ławiej jest znaleźć i zrozumieć dlaczego program nie działa tak jak trzeba.  Pamiętaj o możliwości stawiania breakpointów.
 - Pamiętaj o umiejscowieniu kodu w odpowiednim pakiecie. 
 Najprościej, jeśli utworzysz nowy projekt, dodasz plik z testem i pozwolisz `Alt+Enter` 
 na nazwie pakietu wykonać swoją magię.
