@@ -1,13 +1,12 @@
 # 2019/2020 - Zadanie 11 - Strumienie i elementy grafiki
 
-Zadanie 1:
+### Zadanie 1.
 Projektowanie. Klasa Klasterer jest źle zaprojektowana (być może zostało to przez niektórych zauważone). Popraw ewidentne błędy poprzez stworzenie hierarchii klas. Co będzie w klasie bazowej, jakie będą klasy pochodne? Czy jest dobry kandydat na metodę abstrakcyjną w klasie bazowej?
 
 
-Zadanie 2:
+### Zadanie 2.
 Strumienie, oraz elementy grafiki. Do grafiki użyjemy JavaFX, ale trzeba ten pakiet zainstalować (od wersji Java11, JavaFX ie jest już częścią standardowego  jdk).
-1.Instalacja JavaFX
-  Kroki:
+Instalacja JavaFX, kroki:
   1. Tu (https://openjfx.io) znajdziesz pakiet z plikami jar dla javafx (redyrekcja z oracle.com), skopiuj do dowolnego katalogu, powiedzmy {path}
   
   2. Dodaj {path}/javafx-sdk-??.?.?/lib do listy bibliotek do kompilacji w IntelliJ: File-> Project Structure->Modules, +, Jar/Library, Stage: Compile, zastąp ? odpowiednią wersją
