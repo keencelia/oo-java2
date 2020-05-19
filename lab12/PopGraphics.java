@@ -12,13 +12,6 @@ public class PopGraphics extends Application {
 
     @Override public void start(Stage stage) {
 
-        DataSet pop = new DataSet("population.csv", true);
-        long dc = ds.getUniqueCount("Entity");
-
-        if (dc != 242) {
-            System.out.println("It should be 242 not " + dc);
-        }
-
         stage.setTitle("Population Bar Chart");
         final CategoryAxis xAxis = new CategoryAxis();
         final NumberAxis yAxis = new NumberAxis();
@@ -28,8 +21,15 @@ public class PopGraphics extends Application {
         xAxis.setLabel("Country");
         yAxis.setLabel("Population");
 
+        DataSet ds = new DataSet("population.csv", true);
+        long dc = ds.getUniqueCount("Year");
+
+        Long minYear = ds.getMinAsLong("Year");
+        Long midYear = minYear + (dc-1)/2;
+        Long maxYear = minYear + (dc-1);
+
         String [] entities = {"World", "Asia", "Africa", "Europe", "North America"};
-        String [] years = {"1999", "2009", "2019"};
+        String [] years = {minYear.toString(), midYear.toString(), maxYear.toString()};
 
         for (String year: years) {
             XYChart.Series series = new XYChart.Series();

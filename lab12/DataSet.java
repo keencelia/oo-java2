@@ -40,6 +40,7 @@ public class DataSet {
         return cdata;
     }
 
+    // @TODO
     public long getUniqueCount(String name) {
 
         if (header.isEmpty()) return 0;
@@ -52,7 +53,18 @@ public class DataSet {
         return count;
     }
 
+    // @TODO
+    public Long getMinAsLong(String name) {
+        if (header.isEmpty()) return null;
 
+        int index = header.indexOf(name);
+        if (index < 0) return null;
+
+        return null;
+    }
+
+
+    // @TODO
     public List<String> getColumn(String name, String ... criteria) {
 
 
@@ -60,6 +72,7 @@ public class DataSet {
     }
 
 
+    // @TODO
     public List<Long> getColumnAsLong(String name, String ... criteria) {
 
         return null;
