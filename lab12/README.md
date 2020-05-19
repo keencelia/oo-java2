@@ -1,4 +1,4 @@
-# 2019/2020 - Zadanie 11 - Strumienie i elementy grafiki
+# 2019/2020 - Zadanie 12 - Strumienie i elementy grafiki
 
 ### Zadanie 1.
 Projektowanie. Klasa Klasterer jest źle zaprojektowana (być może zostało to przez niektórych zauważone). Popraw ewidentne błędy poprzez stworzenie hierarchii klas. Co będzie w klasie bazowej, jakie będą klasy pochodne? Czy jest dobry kandydat na metodę abstrakcyjną w klasie bazowej?
