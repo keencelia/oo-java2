@@ -1,4 +1,4 @@
-package mini.oo20.lab11;
+package mini.oo20.lab12;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -13,6 +13,11 @@ public class PopGraphics extends Application {
     @Override public void start(Stage stage) {
 
         DataSet pop = new DataSet("population.csv", true);
+        long dc = ds.getUniqueCount("Entity");
+
+        if (dc != 242) {
+            System.out.println("It should be 242 not " + dc);
+        }
 
         stage.setTitle("Population Bar Chart");
         final CategoryAxis xAxis = new CategoryAxis();

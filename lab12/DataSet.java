@@ -1,4 +1,4 @@
-package mini.oo20.lab11;
+package mini.oo20.lab12;
 
 import javafx.util.Pair;
 
@@ -39,6 +39,19 @@ public class DataSet {
 
         return cdata;
     }
+
+    public long getUniqueCount(String name) {
+
+        if (header.isEmpty()) return 0;
+
+        int index = header.indexOf(name);
+        if (index < 0) return 0;
+
+        long count = 0;
+
+        return count;
+    }
+
 
     public List<String> getColumn(String name, String ... criteria) {
 
