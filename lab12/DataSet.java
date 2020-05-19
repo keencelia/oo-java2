@@ -13,6 +13,7 @@ public class DataSet {
     private List<String> header = new ArrayList<String>();
     private List<List<String>> data = new ArrayList<List<String>>();
 
+    // @TODO
     public DataSet(String filename, boolean hasHeader)  {
 
     }
@@ -29,7 +30,6 @@ public class DataSet {
         return cdata;
     }
 
-
     public List<Long> getColumnAsLong(String name) {
 
         List<String> list = getColumn(name);
@@ -43,40 +43,25 @@ public class DataSet {
     // @TODO
     public long getUniqueCount(String name) {
 
-        if (header.isEmpty()) return 0;
-
-        int index = header.indexOf(name);
-        if (index < 0) return 0;
-
-        long count = 0;
-
-        return count;
+        return 0;
     }
 
     // @TODO
     public Long getMinAsLong(String name) {
-        if (header.isEmpty()) return null;
-
-        int index = header.indexOf(name);
-        if (index < 0) return null;
 
         return null;
     }
-
 
     // @TODO
     public List<String> getColumn(String name, String ... criteria) {
 
-
         return null;
     }
-
 
     // @TODO
     public List<Long> getColumnAsLong(String name, String ... criteria) {
 
         return null;
     }
-
 
 }

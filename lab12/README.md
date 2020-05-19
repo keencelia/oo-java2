@@ -23,6 +23,8 @@ Strumienie, oraz elementy grafiki. Do grafiki użyjemy JavaFX, ale trzeba ten pa
         public DataSet (String filename, boolean hasHeader) {}
         public List<String> getColumn(String name, String ... criteria) {}
         public List<Long>  getColumnAsLong(String name, String ... critera) {}
+        public int getUniqueCount(String name) {}
+        public Long getMinAsLong(String name) {}
     }
 ```
 4. Uruchom PopGraphic (Run)
