@@ -5,7 +5,7 @@ Projektowanie. Klasa Klasterer jest źle zaprojektowana (być może zostało to 
 
 
 ### Zadanie 2.
-Strumienie, oraz elementy grafiki. Do grafiki użyjemy JavaFX, ale trzeba ten pakiet zainstalować (od wersji Java11, JavaFX ie jest już częścią standardowego  jdk).
+Strumienie, oraz elementy grafiki. Do grafiki użyjemy JavaFX, ale trzeba ten pakiet zainstalować (od wersji Java11, JavaFX nie jest już częścią standardowego  jdk).
 1. Instalacja JavaFX, kroki:
    - Tu (https://openjfx.io) znajdziesz pakiet z plikami jar dla javafx (redyrekcja z oracle.com), skopiuj do dowolnego katalogu, powiedzmy {path}
   
