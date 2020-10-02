@@ -37,7 +37,7 @@ public class PopGraphics extends Application {
             series.setName(year.toString());
 
             for (String ent: entities) {
-                series.getData().add(new XYChart.Data(ent, pop.getColumnAsLong("Population", "Entity", ent, "Year", year ).get(0)));
+                series.getData().add(new XYChart.Data(ent, ds.getColumnAsLong("Population", "Entity", ent, "Year", year ).get(0)));
             }
 
             bc.getData().add(series);
